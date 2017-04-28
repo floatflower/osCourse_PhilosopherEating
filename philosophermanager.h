@@ -20,16 +20,12 @@ public slots:
     void onEating(int id);
     void onRelease(int id);
 private:
-    Philosopher *m_phy1;
-    Philosopher *m_phy2;
-    Philosopher *m_phy3;
-    Philosopher *m_phy4;
-    Philosopher *m_phy5;
-    Philosopher *m_phy6;
-    Philosopher *m_phy7;
-    Philosopher *m_phy8;
     QHash<QString, Philosopher*> *phyList;
+    QHash<QString, QObject*> *qml_chopstick;
+    QHash<QString, QObject*> *qml_phy;
+    QHash<QString, QObject*> *qml_phyStatus;
     QObject *m_root;
+
 };
 
 #endif // PHILOSOPHERMANAGER_H
